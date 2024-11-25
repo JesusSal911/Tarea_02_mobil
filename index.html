@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles1.css"> <!-- Link a tu CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Link a Font Awesome -->
+    <title>Furnitore</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- Logo de la empresa -->
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo de Furnitore">
+            </div>
+
+            <!-- Menú de navegación -->
+            <ul>
+                <li class="active">Inicio</li>
+                <li>Productos</li>
+                <li>Nosotros</li>
+                <li>Servicios</li>
+                <li>Contacto</li>
+            </ul>
+
+            <!-- Íconos a la derecha -->
+            <div class="nav-icons">
+                <i class="fas fa-user nav-icon"></i> <!-- Icono de personita (registro) -->
+                <i class="fas fa-shopping-cart nav-icon"></i> <!-- Icono de carrito de compras -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Estudio Moderno de diseño de interiores</h1>
+            <p>Encuentra los mejores muebles para decorar tu hogar. Tenemos una gran variedad de diseños para todos los
+                gustos.</p>
+
+            <!-- Botones -->
+            <div class="buttons">
+                <button class="button">Nuestros productos</button>
+                <button class="button">Explora</button>
+            </div>
+        </div>
+
+        <!-- Imagen del sofá -->
+        <div class="sofa-image-container">
+            <img src="img/portada.jpg" alt="Green Sofa" class="sofa-image">
+        </div>
+    </section>
+
+    <!-- Catálogo de Sillas -->
+    <section class="catalogo-sillas">
+        <div class="container">
+            <div class="intro">
+                <h2>Fabricado con un material excelente.</h2>
+                <p class="calidad-estilo">
+                    Calidad y estilo se fusionan en nuestros muebles, fabricados con materiales excelentes para
+                    ofrecerte durabilidad y elegancia en cada pieza.
+                </p>
+                <a href="#" class="button-explora">Explora</a> <!-- Botón "Explora" -->
+            </div>
+
+            <div class="section">
+                <div class="chair">
+                    <img src="img/Nordic.jpg" alt="Nordic Chair">
+                    <h3>Nordic Chair</h3>
+                    <p>$50.00</p>
+                </div>
+                <div class="chair">
+                    <img src="img/kruzo.jpg" alt="Kruzo Aero Chair">
+                    <h3>Kruzo Aero Chair</h3>
+                    <p>$78.00</p>
+                </div>
+                <div class="chair">
+                    <img src="img/chair.jpg" alt="Ergonomic Chair">
+                    <h3>Ergonomic Chair</h3>
+                    <p>$43.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Nueva sección de Diseño de Interiores -->
+    <section class="design-section">
+        <div class="container">
+            <!-- Contenedor de imágenes (superpuestas) -->
+            <div class="image-collage">
+                <img src="img/imagen1.jpg" alt="Imagen 1" class="image-1">
+                <img src="img/imagen2.jpg" alt="Imagen 2" class="image-2">
+                <img src="img/imagen3.jpg" alt="Imagen 3" class="image-3">
+            </div>
+
+            <!-- Contenedor de texto -->
+            <div class="text-container">
+                <h2>Le ayudamos a diseñar interiores modernos</h2>
+                <p>Con nuestro servicio, transformamos su hogar en un espacio contemporáneo y funcional,
+                    brindando asesoramiento personalizado para capturar su visión, selección de muebles y
+                    accesorios de alta calidad, optimización del espacio con técnicas de diseño innovadoras
+                    y soluciones tecnológicas inteligentes para hacer su vida más conveniente y eficiente.</p>
+                <ul>
+                    <li class="list-item">Transformamos su hogar con resultados sorprendentes.</li>
+                    <li class="list-item">Integración de elementos funcionales y estéticos.</li>
+                </ul>
+                <ul>
+                    <li class="list-item">Conceptos innovadores que reflejan su estilo único.</li>
+                    <li class="list-item">Asesoramiento experto para capturar su visión.</li>
+                </ul>
+                <a href="#" class="button-explora">Explora</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Sección de Testimonios -->
+<style>
+    /* General */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f9f9;
+    }
+
+    .testimonial-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-header h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    /* Carrusel */
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        gap: 20px;
+        padding-bottom: 20px;
+    }
+
+    .testimonial {
+        flex: 0 0 100%;
+        /* Cada testimonio ocupa el 100% del ancho visible */
+        scroll-snap-align: center;
+        background: #f3f3f3;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .author {
+        margin-top: 20px;
+    }
+
+    .author img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .author h3 {
+        margin: 10px 0 5px;
+        color: #555;
+    }
+
+    .author p {
+        color: #888;
+    }
+
+    /* Indicadores */
+    .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        background: #ddd;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .dot.active {
+        background: #333;
+    }
+
+    /* Animación automática */
+    @keyframes autoSlide {
+        0%,
+        25% {
+            scroll-snap-align: start;
+        }
+
+        50%,
+        75% {
+            scroll-snap-align: center;
+        }
+
+        100% {
+            scroll-snap-align: end;
+        }
+    }
+
+    /* Media Query para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .testimonial-container {
+            padding: 15px;
+            margin: 30px auto;
+            max-width: 100%;
+        }
+
+        .carousel {
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .testimonial {
+            flex: 0 0 80%; /* Ajustamos para que el testimonio ocupe el 80% del ancho */
+            scroll-snap-align: start;
+            margin: 0 auto;
+        }
+
+        .author img {
+            width: 60px; /* Reducimos el tamaño de la imagen */
+            height: 60px;
+        }
+
+        .controls {
+            margin-top: 15px;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+        }
+    }
+</style>
+
+<section class="testimonial-container">
+    <div class="testimonial-header">
+        <h2>Testimonios</h2>
+    </div>
+
+    <!-- Carrusel -->
+    <div class="carousel">
+        <!-- Testimonio 1 -->
+        <div class="testimonial">
+            <p>"No puedo expresar lo satisfecha que estoy con el resultado final de mi proyecto de diseño de interiores. Desde el primer contacto hasta la entrega final, el equipo proporcionó un nivel excepcional de servicio al cliente y conocimientos expertos. Me sentí escuchada y apoyada en cada paso del camino."</p>
+            <div class="author">
+                <img src="img/laura.jpg" alt="Laura Sevilla">
+                <h3>Laura Sevilla</h3>
+                <p>CEO, Co-Founder, XYZ Inc.</p>
+            </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="testimonial">
+            <p>"El servicio fue excepcional. Cada detalle fue cuidadosamente considerado, y los resultados superaron mis expectativas. El equipo de diseño se encargó de cada aspecto del proceso, asegurándose de que todos mis gustos y necesidades fueran tomados en cuenta."</p>
+            <div class="author">
+                <img src="img/juan.jpg" alt="Juan Perez">
+                <h3>Juan Perez</h3>
+                <p>Director de Marketing, ABC Corp.</p>
+            </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="testimonial">
+            <p>"Excelente servicio, realmente transformaron mi espacio de una manera única. El proceso fue tan fácil y el resultado es impresionante."</p>
+            <div class="author">
+                <img src="img/maria.jpg" alt="Maria Lopez">
+                <h3>Maria Lopez</h3>
+                <p>Consultora, Freelance</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Indicadores -->
+    <div class="controls">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</section>
+
+<!-- Sección de Suscripción -->
+<section class="subscribe-section">
+    <div class="container">
+        <div class="subscribe">
+            <input type="email" placeholder="Ingresa tu correo electrónico" aria-label="Correo electrónico" />
+            <button>Suscríbete</button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Pie de Página -->
+    <footer class="footer-container">
+        <!-- Sección de suscripción -->
+        <div class="newsletter">
+            <h3>Subscribe to Newsletter</h3>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Enter your name" name="name" required>
+                <input type="email" placeholder="Enter your e-mail" name="email" required>
+                <button type="submit">
+                    <i class="send-icon">✈</i>
+                </button>
+            </form>
+        </div>
+
+        <!-- Sección principal del footer -->
+        <div class="footer-main">
+            <!-- Información y logo -->
+            <div class="footer-info">
+                <h4>FIN</h4>
+                <p>
+                    Donec mattis porta eros, aliquet finibus risus interdum at. Nulla vulputate
+                    est a nisl lobortis, quis dignissim lorem eleifend.
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"> <i>📷</i> </a>
+                    <a href="#" class="social-icon"> <i>🐦</i> </a>
+                    <a href="#" class="social-icon"> <i>👔</i> </a>
+                    <a href="#" class="social-icon"> <i>💼</i> </a>
+                </div>
+            </div>
+
+            <!-- Enlaces -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Knowledge base</a></li>
+                    <li><a href="#">Live chat</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Nordic Chair</a></li>
+                    <li><a href="#">Kruzo Aero</a></li>
+                    <li><a href="#">Ergonomic</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Imagen del sillón -->
+        <div class="footer-image">
+            <img src="img/sillon.jpg" alt="Sillón">
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>Copyright 2022 zainali00759@gmail.com. All Rights Reserved.</p>
+            <div class="footer-policy">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
